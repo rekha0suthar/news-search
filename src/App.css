@@ -1,38 +1,156 @@
-.App {
+.news-container {
+  max-width: 900px;
+  margin: 10px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-container h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.news-input input {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 6px #ccc;
+  border-radius: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.news-wrapper {
+  margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.news-wrapper a {
+  text-decoration: none;
+}
+
+.news-article {
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0px 0px 2px #ccc;
+  padding: 2px 20px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  color: black;
+}
+
+.news-article:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.page-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 0px 10px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 6px #ccc;
+  max-width: max-content;
+  margin: 20px auto;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Toggle css */
+.container {
+  text-align: start;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 10px auto;
+}
+.toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+  margin-left: 10px;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: 'YES';
+  padding-left: 10px;
+  background-color: #060;
+  color: #fff;
+  font-size: 16px;
+}
+.inner:after {
+  content: 'NO';
+  padding-right: 10px;
+  background-color: #bbb;
+  color: #fff;
+  text-align: right;
+}
+.switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .label .switch {
+  right: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-article {
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .news-input input {
+    width: 500px;
   }
 }
