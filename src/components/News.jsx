@@ -14,7 +14,7 @@ const News = () => {
             </div>
           </a>
         ))}
-      <p className="dummy-mes">No Article found</p>
+      {news.length === 0 && <p className="dummy-mes">No Article found</p>}
     </div>
   );
 };
