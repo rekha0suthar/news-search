@@ -7,8 +7,8 @@ import Pagination from './Pagination';
 import { NewsContext } from '../NewsContext';
 import Spinner from '../assets/loading.gif';
 
-const API_URL = process.env.REACT_APP_API_URL;
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = 'https://content.guardianapis.com/search';
+const API_KEY = 'e8ef1103-fb3f-49b0-bead-84e186eb5f14';
 
 const Home = () => {
   const {
