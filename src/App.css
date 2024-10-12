@@ -145,6 +145,23 @@
   right: 0px;
 }
 
+.spinner {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.spinner img {
+  width: 250px;
+  margin-top: 20px;
+}
+
+.dummy-mes {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 150px auto;
+}
+
 @media screen and (max-width: 768px) {
   .news-article {
     width: auto;

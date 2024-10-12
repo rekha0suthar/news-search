@@ -9,6 +9,7 @@ const NewsContextProvider = ({ children }) => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [isOffline, setIsOffline] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <NewsContext.Provider
@@ -23,6 +24,8 @@ const NewsContextProvider = ({ children }) => {
         setTotalPages,
         isOffline,
         setIsOffline,
+        loading,
+        setLoading,
       }}
     >
       {children}
